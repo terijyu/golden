@@ -1349,6 +1349,15 @@
         closeModal("privacy-modal");
         closeModal("terms-modal");
       });
+      // Check URL hash on page load to open modals automatically
+  window.addEventListener('load', () => {
+    const hash = window.location.hash;
+    if (hash === '#privacy') {
+      openModal('privacy-modal');
+    } else if (hash === '#terms') {
+      openModal('terms-modal');
+    }
+  });
     </script>
   </body>
 </html>
