@@ -894,45 +894,210 @@
       </div>
     </footer>
 
-    <!-- Privacy modal -->
-    <div
-      id="privacy-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="privacy-title"
-      style="
-        position: fixed;
-        inset: 0;
-        background: rgba(20, 19, 26, 0.5);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 18px;
-        z-index: 50;
-      "
-      onclick="if (event.target === this) closeModal('privacy-modal');"
-    >
-      <div
+  <!-- Privacy modal -->
+<div
+  id="privacy-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="privacy-title"
+  style="
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 19, 26, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    z-index: 50;
+  "
+  onclick="if (event.target === this) closeModal('privacy-modal');"
+>
+  <div
+    style="
+      max-width: 820px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      border: 2px solid rgba(20, 19, 26, 0.22);
+      border-radius: 18px;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25);
+      padding: 18px;
+    "
+  >
+    <!-- Header -->
+    <div style="display: flex; align-items: start; justify-content: space-between; gap: 12px">
+      <div style="min-width: 0">
+        <h3 id="privacy-title" style="margin:0; font-family: Fredoka, sans-serif; font-size: 22px;">
+          Privacy Policy
+        </h3>
+        <p style="margin: 6px 0 0; opacity: .85; font-weight: 600; font-size: 13px; line-height: 1.45;">
+          Last updated: [Month Day, Year]
+        </p>
+      </div>
+
+      <button
         style="
-          max-width: 720px;
-          width: 100%;
-          background: rgba(255, 255, 255, 0.92);
-          border: 2px solid rgba(20, 19, 26, 0.22);
-          border-radius: 18px;
-          box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25);
-          padding: 18px;
+          border: 2px solid rgba(20, 19, 26, 0.25);
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 12px;
+          padding: 8px 10px;
+          font-weight: 900;
+          cursor: pointer;
+          flex: 0 0 auto;
         "
+        onclick="closeModal('privacy-modal')"
+        aria-label="Close privacy modal"
       >
-        <div style="display: flex; align-items: start; justify-content: space-between; gap: 12px">
-          <div>
-            <h3 id="privacy-title" style="margin: 0; font-family: Erica One, sans-serif; font-size: 22px">
-              Privacy (short version)
-            </h3>
-            <p style="margin: 8px 0 0; opacity: 0.85; font-weight: 600; font-size: 13px; line-height: 1.45">
-              This mock site doesn’t collect anything. In your real policy, cover: calendar access, notification permissions,
-              location (if used for ETA), retention periods, and deletion requests.
-            </p>
-          </div>
+        ✕
+      </button>
+    </div>
+
+    <!-- Scrollable body -->
+    <div
+      style="
+        margin-top: 14px;
+        max-height: min(70vh, 620px);
+        overflow-y: auto;
+        padding-right: 6px;
+        display: grid;
+        gap: 10px;
+      "
+    >
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          This Privacy Policy explains how Golden (“the App”) collects, uses, and protects your information.
+          Golden helps you arrive on time through calendar syncing, traffic-aware reminders, and optional
+          location-based alerts. We collect only the minimum data required to deliver these features.
+        </p>
+      </div>
+
+      <!-- 1. Information We Collect -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">1. Information We Collect</strong>
+        <ul style="margin:0; padding-left: 18px; font-size: 13px; line-height: 1.55; opacity:.92;">
+          <li>Calendar event titles, times, and locations when you connect your calendar</li>
+          <li>App preferences such as reminder timing, buffers, and notification settings</li>
+          <li>Support communications if you contact us</li>
+        </ul>
+        <p style="margin:10px 0 0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden does not require account creation unless explicitly stated in the App.
+        </p>
+      </div>
+
+      <!-- Automatic Data -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">Automatically Collected Information</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden may collect limited device and usage information such as device type, operating system,
+          app version, crash logs, and anonymous performance metrics. This data is used solely to maintain,
+          improve, and secure the App.
+        </p>
+      </div>
+
+      <!-- Location -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">Location Information (Optional)</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          If enabled, Golden may access approximate or real-time location solely to estimate travel time
+          for active reminders such as “Leave Now” alerts. Golden does not track your location continuously
+          and does not store historical location data beyond what is required to deliver the selected feature.
+        </p>
+      </div>
+
+      <!-- 2. Use -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">2. How We Use Information</strong>
+        <ul style="margin:0; padding-left: 18px; font-size: 13px; line-height: 1.55; opacity:.92;">
+          <li>Calculate estimated departure and arrival times</li>
+          <li>Send reminders and notifications you request</li>
+          <li>Improve reliability, accuracy, and performance</li>
+          <li>Detect and resolve technical issues</li>
+        </ul>
+        <p style="margin:10px 0 0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden does not use your data for advertising, profiling, resale, or machine learning model training.
+        </p>
+      </div>
+
+      <!-- Payments -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">3. Payments & Subscriptions</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden offers paid subscriptions with a free trial. All payments, renewals, and cancellations
+          are processed by Apple App Store or Google Play. Golden does not collect or store payment or
+          billing information.
+        </p>
+      </div>
+
+      <!-- Sharing -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">4. Data Sharing</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden does not sell or rent personal information. Limited data may be shared with service
+          providers (such as mapping, analytics, or infrastructure services) solely to operate the App.
+        </p>
+      </div>
+
+      <!-- Retention -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">5. Data Retention</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden does not permanently store calendar event content and processes event data transiently
+          to deliver reminders. Data is retained only as long as necessary to operate the App.
+        </p>
+      </div>
+
+      <!-- Rights -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">6. Your Choices & Rights</strong>
+        <ul style="margin:0; padding-left: 18px; font-size: 13px; line-height: 1.55; opacity:.92;">
+          <li>Disconnect your calendar at any time</li>
+          <li>Disable notifications or location access in device settings</li>
+          <li>Cancel subscriptions through your app store</li>
+          <li>Uninstall the App at any time</li>
+        </ul>
+        <p style="margin:10px 0 0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Depending on your location, you may have additional rights under laws such as GDPR or CCPA,
+          including requesting access to or deletion of your data.
+        </p>
+      </div>
+
+      <!-- Security -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">7. Security</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Reasonable technical and organizational safeguards are used to protect your information.
+          However, no system is completely secure.
+        </p>
+      </div>
+
+      <!-- Children -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">8. Children’s Privacy</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden is not intended for children under 13 and does not knowingly collect personal data from children.
+        </p>
+      </div>
+
+      <!-- Changes -->
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">9. Changes to This Policy</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          This Privacy Policy may be updated from time to time. Continued use of the App constitutes
+          acceptance of the updated policy.
+        </p>
+      </div>
+
+      <!-- Contact -->
+      <div style="background: rgba(255,255,255,.85); border: 2px dashed rgba(20,19,26,.22); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">Contact</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          For privacy questions or requests:<br />
+          Email: <a href="mailto:support@golden.app" style="text-decoration: underline;">support@golden.app</a><br />
+          Operator: Golden
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
           <button
             style="
@@ -1135,7 +1300,7 @@
         <strong style="display:block; margin:0 0 6px;">11. Contact</strong>
         <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
           For questions regarding these Terms:<br />
-          Email: <a href="mailto:support@golden.app" style="text-decoration: underline;">support@golden.app</a>
+          Email: <a href="mailto:hello@kijuki.com" style="text-decoration: underline;">hello@kijuki.com</a>
         </p>
       </div>
 
