@@ -952,84 +952,204 @@
       </div>
     </div>
 
-    <!-- Terms modal -->
-    <div
-      id="terms-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="terms-title"
-      style="
-        position: fixed;
-        inset: 0;
-        background: rgba(20, 19, 26, 0.5);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        padding: 18px;
-        z-index: 50;
-      "
-      onclick="if (event.target === this) closeModal('terms-modal');"
-    >
-      <div
-        style="
-          max-width: 720px;
-          width: 100%;
-          background: rgba(255, 255, 255, 0.92);
-          border: 2px solid rgba(20, 19, 26, 0.22);
-          border-radius: 18px;
-          box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25);
-          padding: 18px;
-        "
-      >
-       <div style="display: flex; align-items: start; justify-content: space-between; gap: 12px">
-  <div style="min-width: 0">
-    <h3 id="terms-title" style="margin:0; font-family: Fredoka, sans-serif; font-size: 22px;">
-      Terms of Service
-    </h3>
-    <p style="margin: 6px 0 0; opacity: .85; font-weight: 600; font-size: 13px; line-height: 1.45;">
-      Last updated: [Month Day, Year]
-    </p>
-  </div>
-
-  <button
+   <!-- Terms modal -->
+<div
+  id="terms-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="terms-title"
+  style="
+    position: fixed;
+    inset: 0;
+    background: rgba(20, 19, 26, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    z-index: 50;
+  "
+  onclick="if (event.target === this) closeModal('terms-modal');"
+>
+  <div
     style="
-      border: 2px solid rgba(20, 19, 26, 0.25);
-      background: rgba(255, 255, 255, 0.8);
-      border-radius: 12px;
-      padding: 8px 10px;
-      font-weight: 900;
-      cursor: pointer;
-      flex: 0 0 auto;
+      max-width: 820px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      border: 2px solid rgba(20, 19, 26, 0.22);
+      border-radius: 18px;
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.25);
+      padding: 18px;
     "
-    onclick="closeModal('terms-modal')"
-    aria-label="Close terms modal"
   >
-    ✕
-  </button>
-</div>
+    <!-- Header row -->
+    <div style="display: flex; align-items: start; justify-content: space-between; gap: 12px">
+      <div style="min-width: 0">
+        <h3 id="terms-title" style="margin:0; font-family: Fredoka, sans-serif; font-size: 22px;">
+          Terms of Service
+        </h3>
+        <p style="margin: 6px 0 0; opacity: .85; font-weight: 600; font-size: 13px; line-height: 1.45;">
+          Last updated: [Month Day, Year]
+        </p>
+      </div>
 
-<div style="margin-top: 14px; display: grid; gap: 10px;">
-  <!-- 🔽 paste the FULL Terms content blocks I gave you here 🔽 -->
-</div>
+      <button
+        style="
+          border: 2px solid rgba(20, 19, 26, 0.25);
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 12px;
+          padding: 8px 10px;
+          font-weight: 900;
+          cursor: pointer;
+          flex: 0 0 auto;
+        "
+        onclick="closeModal('terms-modal')"
+        aria-label="Close terms modal"
+      >
+        ✕
+      </button>
+    </div>
 
+    <!-- Scrollable body -->
+    <div
+      style="
+        margin-top: 14px;
+        max-height: min(70vh, 620px);
+        overflow-y: auto;
+        padding-right: 6px;
+        display: grid;
+        gap: 10px;
+      "
+    >
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          These Terms of Service (“Terms”) govern your use of Golden (the “App”). By downloading or using the App, you agree to these Terms.
+          If you do not agree, do not use the App.
+        </p>
+      </div>
 
-          <button
-            style="
-              border: 2px solid rgba(20, 19, 26, 0.25);
-              background: rgba(255, 255, 255, 0.8);
-              border-radius: 12px;
-              padding: 8px 10px;
-              font-weight: 900;
-              cursor: pointer;
-            "
-            onclick="closeModal('terms-modal')"
-            aria-label="Close terms modal"
-          >
-            ✕
-          </button>
-        </div>
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">1. Description of the Service</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden provides time estimates, reminders, and notifications intended to help you plan when to leave for scheduled events.
+        </p>
+        <ul style="margin:8px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.55; opacity:.92;">
+          <li>Provides estimated departure times</li>
+          <li>May use third-party data (e.g., traffic conditions)</li>
+          <li>Does not provide navigation or turn-by-turn directions</li>
+          <li>Does not guarantee punctuality</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">2. No Guarantees</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          All reminders, ETAs, and notifications are estimates only. Actual travel times may vary due to traffic, weather, delays,
+          user behavior, device limitations, or third-party services.
+        </p>
+        <p style="margin:10px 0 0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden does not guarantee arrival times, accuracy of estimates, or that you will not be late. You are solely responsible
+          for deciding when to leave and how to travel.
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">3. Not Safety-Critical</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden is not a navigation system, emergency service, or safety-critical / real-time monitoring tool.
+        </p>
+        <p style="margin:10px 0 0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Do not rely on Golden for emergencies, time-sensitive safety decisions, or situations where failure could result in harm,
+          injury, or significant loss.
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">4. User Responsibility</strong>
+        <ul style="margin:0; padding-left: 18px; font-size: 13px; line-height: 1.55; opacity:.92;">
+          <li>You remain fully responsible for your schedule, travel decisions, and punctuality.</li>
+          <li>You will not rely exclusively on the App for critical commitments.</li>
+          <li>You understand that delays, missed events, or losses may occur despite using the App.</li>
+        </ul>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">5. Subscriptions &amp; Free Trials</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden offers a paid subscription with a 7-day free trial. Payments, renewals, cancellations, and refunds are handled by
+          Apple App Store or Google Play. Golden does not process payments directly.
+        </p>
+        <p style="margin:10px 0 0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Subscription access continues through the end of the billing or trial period after cancellation.
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">6. Limitation of Liability</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          To the maximum extent permitted by law, Golden and its developer shall not be liable for:
+        </p>
+        <ul style="margin:8px 0 0; padding-left: 18px; font-size: 13px; line-height: 1.55; opacity:.92;">
+          <li>Missed appointments, meetings, or events</li>
+          <li>Missed transportation (including flights, trains, or rides)</li>
+          <li>Lost income, business opportunities, or consequential damages</li>
+          <li>Delays caused by inaccurate estimates or third-party data</li>
+        </ul>
+        <p style="margin:10px 0 0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden’s total liability for any claim shall not exceed the amount you paid for the App in the past 12 months, or $100,
+          whichever is less.
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">7. Service Availability</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          The App may be unavailable at times due to maintenance, network failures, or third-party service interruptions. Golden does
+          not guarantee uninterrupted or error-free operation.
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">8. Future Accounts</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          You may currently use Golden without an account. In the future, optional account features (such as email login) may be
+          introduced. Continued use of the App after such changes constitutes acceptance of updated Terms.
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">9. Termination</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          You may stop using the App at any time by uninstalling it. Golden may suspend or discontinue the App at any time without
+          liability.
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">10. Governing Law</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          These Terms are governed by the laws of the United States, without regard to conflict-of-law principles.
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,.7); border: 1px solid rgba(20,19,26,.18); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">11. Contact</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          For questions regarding these Terms:<br />
+          Email: <a href="mailto:support@golden.app" style="text-decoration: underline;">support@golden.app</a>
+        </p>
+      </div>
+
+      <div style="background: rgba(255,255,255,.85); border: 2px dashed rgba(20,19,26,.22); border-radius: 14px; padding: 12px;">
+        <strong style="display:block; margin:0 0 6px;">Important Reminder</strong>
+        <p style="margin:0; font-size: 13px; line-height: 1.55; opacity:.92;">
+          Golden provides estimated reminders and departure times based on available data. Actual conditions may vary.
+          Golden doesn’t guarantee arrival times and doesn’t replace your judgment. You’re always responsible for deciding when to leave.
+        </p>
       </div>
     </div>
+  </div>
+</div>
+
 
     <script>
       // Smooth scroll for in-page links
