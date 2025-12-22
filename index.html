@@ -981,16 +981,37 @@
           padding: 18px;
         "
       >
-        <div style="display: flex; align-items: start; justify-content: space-between; gap: 12px">
-          <div>
-            <h3 id="terms-title" style="margin: 0; font-family: Erica One, sans-serif; font-size: 22px">
-              Terms (placeholder)
-            </h3>
-            <p style="margin: 8px 0 0; opacity: 0.85; font-weight: 600; font-size: 13px; line-height: 1.45">
-              Replace this with your real terms. Typical sections: eligibility, subscription/billing, acceptable use,
-              disclaimers, and limitation of liability.
-            </p>
-          </div>
+       <div style="display: flex; align-items: start; justify-content: space-between; gap: 12px">
+  <div style="min-width: 0">
+    <h3 id="terms-title" style="margin:0; font-family: Fredoka, sans-serif; font-size: 22px;">
+      Terms of Service
+    </h3>
+    <p style="margin: 6px 0 0; opacity: .85; font-weight: 600; font-size: 13px; line-height: 1.45;">
+      Last updated: [Month Day, Year]
+    </p>
+  </div>
+
+  <button
+    style="
+      border: 2px solid rgba(20, 19, 26, 0.25);
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-weight: 900;
+      cursor: pointer;
+      flex: 0 0 auto;
+    "
+    onclick="closeModal('terms-modal')"
+    aria-label="Close terms modal"
+  >
+    ✕
+  </button>
+</div>
+
+<div style="margin-top: 14px; display: grid; gap: 10px;">
+  <!-- 🔽 paste the FULL Terms content blocks I gave you here 🔽 -->
+</div>
+
 
           <button
             style="
