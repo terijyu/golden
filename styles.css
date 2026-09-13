@@ -285,6 +285,36 @@ h1 {
 .network-squares rect:nth-child(2) { animation-delay: -2s; }
 .network-squares rect:nth-child(3) { animation-delay: -4s; }
 
+.scan-flashes {
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.scan-flashes rect {
+  fill: rgba(255, 255, 255, 0.96);
+  stroke: rgba(111, 118, 217, 0.85);
+  stroke-width: 1;
+  opacity: 0;
+  filter: drop-shadow(0 0 9px rgba(143, 151, 255, 0.68));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: crop-flash 5.8s linear infinite;
+}
+
+.scan-flashes rect:nth-child(2) {
+  fill: rgba(232, 255, 255, 0.94);
+  stroke: rgba(81, 184, 200, 0.78);
+  animation-duration: 7.1s;
+  animation-delay: -2.35s;
+}
+
+.scan-flashes rect:nth-child(3) {
+  fill: rgba(255, 237, 246, 0.95);
+  stroke: rgba(214, 111, 166, 0.76);
+  animation-duration: 6.4s;
+  animation-delay: -4.1s;
+}
+
 .data-tag {
   position: absolute;
   z-index: 4;
@@ -408,6 +438,29 @@ h1 {
   45% { opacity: 1; transform: scale(1.055); stroke: rgba(111, 118, 217, 0.78); }
 }
 
+@keyframes crop-flash {
+  0%, 12%, 18%, 46%, 52%, 77%, 85%, 100% {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  13% {
+    opacity: 0.4;
+    transform: scale(1.01);
+  }
+  14.5%, 48%, 79% {
+    opacity: 0.9;
+    transform: scale(1.045);
+  }
+  16%, 50%, 82% {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+  83% {
+    opacity: 0.72;
+    transform: scale(1.025);
+  }
+}
+
 @keyframes tag-in {
   from { opacity: 0; transform: translateY(0.35rem); }
   to { opacity: 1; transform: translateY(0); }
@@ -483,5 +536,6 @@ h1 {
   }
 
   .signal-points,
-  .node-rings { display: none; }
+  .node-rings,
+  .scan-flashes { display: none; }
 }
