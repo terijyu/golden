@@ -48,33 +48,13 @@ a { color: inherit; }
   padding-top: clamp(1.5rem, 3.5vw, 3rem);
 }
 
-.mini-mark,
-.nav-link { text-decoration: none; }
+.mini-mark { text-decoration: none; }
 
 .mini-mark {
   font-size: 1.12rem;
   font-weight: 600;
   letter-spacing: -0.045em;
 }
-
-.nav-link {
-  display: inline-flex;
-  gap: 0.45rem;
-  align-items: center;
-  min-height: 44px;
-  font-family: "IBM Plex Mono", monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.nav-link span,
-.project-arrow { transition: transform 180ms ease; }
-
-.nav-link:hover span,
-.nav-link:focus-visible span,
-.current-project:hover .project-arrow,
-.current-project:focus-visible .project-arrow { transform: translate(0.2rem, -0.2rem); }
 
 .hero {
   position: relative;
@@ -95,7 +75,6 @@ a { color: inherit; }
 
 .specimen-id,
 .specimen figcaption,
-.project-label,
 .site-footer {
   font-family: "IBM Plex Mono", monospace;
   text-transform: uppercase;
@@ -139,30 +118,6 @@ h1 {
   opacity: 0;
   animation: copy-in 800ms 310ms ease-out forwards;
 }
-
-.current-project {
-  display: grid;
-  grid-template-columns: auto auto 1fr;
-  gap: 0.8rem;
-  align-items: baseline;
-  width: fit-content;
-  min-height: 48px;
-  margin-top: clamp(2.2rem, 5vh, 4.5rem);
-  padding: 0.9rem 0;
-  border-bottom: 1px solid var(--ink);
-  text-decoration: none;
-  opacity: 0;
-  animation: copy-in 800ms 380ms ease-out forwards;
-}
-
-.project-label {
-  color: var(--quiet);
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-}
-
-.project-name { font-size: 1.12rem; font-weight: 500; }
-.project-arrow { justify-self: end; }
 
 .specimen {
   position: relative;
@@ -518,7 +473,6 @@ h1 {
 @media (max-width: 520px) {
   .specimen-id { margin-bottom: 2rem; }
   .intro { max-width: 18rem; }
-  .current-project { grid-template-columns: auto auto auto; }
 
   .site-footer {
     align-items: flex-start;
