@@ -43,10 +43,10 @@
         <img src="assets/kijuki-specimen-bloom.jpg" alt="An ethereal translucent peony in soft blue, pink, and lilac" width="1536" height="1024" />
         <svg class="specimen-network" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
           <g class="network-lines">
-            <path d="M34 150 L190 150 L292 249 L468 204 L616 302 L811 174 L964 238" />
-            <path d="M105 586 L221 468 L382 506 L545 390 L716 456 L938 351" />
-            <path d="M616 74 L616 625" />
-            <path d="M292 249 L221 468 M468 204 L545 390 M616 302 L716 456" />
+            <path id="route-a" d="M34 150 L190 150 L292 249 L468 204 L616 302 L811 174 L964 238" />
+            <path id="route-b" d="M105 586 L221 468 L382 506 L545 390 L716 456 L938 351" />
+            <path id="route-c" d="M616 74 L616 625" />
+            <path id="route-d" d="M292 249 L221 468 M468 204 L545 390 M616 302 L716 456" />
           </g>
           <g class="network-nodes">
             <circle cx="190" cy="150" r="4" />
@@ -64,6 +64,29 @@
             <rect x="256" y="221" width="72" height="56" />
             <rect x="682" y="420" width="82" height="64" />
             <rect x="784" y="145" width="55" height="55" />
+          </g>
+          <g class="node-rings">
+            <circle cx="190" cy="150" r="4" />
+            <circle cx="292" cy="249" r="4" />
+            <circle cx="468" cy="204" r="4" />
+            <circle cx="616" cy="302" r="4" />
+            <circle cx="811" cy="174" r="4" />
+            <circle cx="221" cy="468" r="4" />
+            <circle cx="382" cy="506" r="4" />
+            <circle cx="545" cy="390" r="4" />
+            <circle cx="716" cy="456" r="4" />
+            <circle cx="938" cy="351" r="4" />
+          </g>
+          <g class="signal-points">
+            <circle r="5">
+              <animateMotion path="M34 150 L190 150 L292 249 L468 204 L616 302 L811 174 L964 238" dur="8s" repeatCount="indefinite" />
+            </circle>
+            <circle r="4">
+              <animateMotion path="M105 586 L221 468 L382 506 L545 390 L716 456 L938 351" dur="7s" begin="-3.5s" repeatCount="indefinite" />
+            </circle>
+            <circle r="4">
+              <animateMotion path="M616 74 L616 625" dur="5s" begin="-1.5s" repeatCount="indefinite" />
+            </circle>
           </g>
         </svg>
         <span class="data-tag data-tag--one" aria-hidden="true">petal.scan</span>
