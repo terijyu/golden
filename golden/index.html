@@ -21,7 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Erica+One&amp;family=Fredoka:wght@500;600;700&amp;display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=7" />
   </head>
 
   <body>
@@ -75,7 +75,8 @@
           <img class="cloud-art cloud-art--behind-right" src="assets/mock-cloud-wide.png" alt="" aria-hidden="true" />
 
           <div class="phone">
-            <div class="phone-shell">
+            <div class="phone-float">
+              <div class="phone-shell">
               <div class="phone-screen">
                 <div class="dynamic-island" aria-hidden="true"></div>
                 <div class="status-row">
@@ -98,7 +99,7 @@
 
                 <div class="countdown">
                   <span>Leave in</span>
-                  <strong>12:46</strong>
+                  <strong data-countdown aria-label="7 minutes remaining">07:00</strong>
                 </div>
 
                 <div class="traffic-row">
@@ -121,6 +122,7 @@
                   <span>⚙<small>Settings</small></span>
                 </div>
               </div>
+            </div>
             </div>
           </div>
 
@@ -289,5 +291,44 @@
         <p>© 2026 Golden</p>
       </div>
     </footer>
+    <script>
+      (() => {
+        const countdown = document.querySelector("[data-countdown]")
+        const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+
+        if (!countdown) return
+
+        let remainingSeconds = 420
+        let countdownInterval
+
+        const renderCountdown = () => {
+          const minutes = Math.floor(remainingSeconds / 60)
+          const seconds = remainingSeconds % 60
+          countdown.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`
+          countdown.setAttribute("aria-label", `${minutes} minutes and ${seconds} seconds remaining`)
+        }
+
+        const tick = () => {
+          remainingSeconds = remainingSeconds <= 412 ? 420 : remainingSeconds - 1
+          countdown.classList.remove("is-ticking")
+          renderCountdown()
+          void countdown.offsetWidth
+          countdown.classList.add("is-ticking")
+        }
+
+        const startCountdown = () => {
+          window.clearInterval(countdownInterval)
+          remainingSeconds = 420
+          renderCountdown()
+          if (!reducedMotion.matches) countdownInterval = window.setInterval(tick, 1000)
+        }
+
+        reducedMotion.addEventListener("change", startCountdown)
+        document.addEventListener("visibilitychange", () => {
+          if (!document.hidden) startCountdown()
+        })
+        startCountdown()
+      })()
+    </script>
   </body>
 </html>
