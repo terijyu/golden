@@ -298,6 +298,7 @@
     <script>
       (() => {
         const countdown = document.querySelector("[data-countdown]")
+        const countdownLabel = countdown?.previousElementSibling
         const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
 
         if (!countdown) return
@@ -310,14 +311,16 @@
           const seconds = remainingSeconds % 60
           countdown.textContent = `${minutes}:${String(seconds).padStart(2, "0")}`
           countdown.setAttribute("aria-label", `${minutes} minutes and ${seconds} seconds remaining`)
+          if (countdownLabel) countdownLabel.textContent = remainingSeconds === 0 ? "Leave now" : "Leave in"
         }
 
         const tick = () => {
-          remainingSeconds = remainingSeconds <= 112 ? 120 : remainingSeconds - 1
+          remainingSeconds = Math.max(0, remainingSeconds - 1)
           countdown.classList.remove("is-ticking")
           renderCountdown()
           void countdown.offsetWidth
           countdown.classList.add("is-ticking")
+          if (remainingSeconds === 0) window.clearInterval(countdownInterval)
         }
 
         const startCountdown = () => {
