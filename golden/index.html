@@ -99,7 +99,7 @@
 
                 <div class="countdown">
                   <span>Leave in</span>
-                  <strong data-countdown aria-label="7 minutes remaining">07:00</strong>
+                  <strong data-countdown aria-label="2 minutes remaining">2:00</strong>
                 </div>
 
                 <div class="traffic-row">
@@ -298,18 +298,18 @@
 
         if (!countdown) return
 
-        let remainingSeconds = 420
+        let remainingSeconds = 120
         let countdownInterval
 
         const renderCountdown = () => {
           const minutes = Math.floor(remainingSeconds / 60)
           const seconds = remainingSeconds % 60
-          countdown.textContent = `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`
+          countdown.textContent = `${minutes}:${String(seconds).padStart(2, "0")}`
           countdown.setAttribute("aria-label", `${minutes} minutes and ${seconds} seconds remaining`)
         }
 
         const tick = () => {
-          remainingSeconds = remainingSeconds <= 412 ? 420 : remainingSeconds - 1
+          remainingSeconds = remainingSeconds <= 112 ? 120 : remainingSeconds - 1
           countdown.classList.remove("is-ticking")
           renderCountdown()
           void countdown.offsetWidth
@@ -318,7 +318,7 @@
 
         const startCountdown = () => {
           window.clearInterval(countdownInterval)
-          remainingSeconds = 420
+          remainingSeconds = 120
           renderCountdown()
           if (!reducedMotion.matches) countdownInterval = window.setInterval(tick, 1000)
         }
