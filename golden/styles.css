@@ -508,7 +508,8 @@ h1 {
 .event-row strong,
 .event-row small,
 .traffic-row strong,
-.traffic-row small {
+.traffic-row small,
+.traffic-row em {
   display: block;
 }
 
@@ -521,6 +522,15 @@ h1 {
 .traffic-row small {
   color: var(--ink-soft);
   font-size: 12px;
+}
+
+.traffic-row em {
+  margin-top: 3px;
+  color: #19736f;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.01em;
 }
 
 .countdown {
