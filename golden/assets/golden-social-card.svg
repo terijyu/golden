@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Golden: Never leave late again</title>
+  <desc id="desc">A yellow Golden app social card with a departure countdown.</desc>
+  <rect width="1200" height="630" fill="#fff8b5"/>
+  <circle cx="1075" cy="98" r="156" fill="#a9f4eb"/>
+  <circle cx="1120" cy="535" r="210" fill="#d9ceff"/>
+  <circle cx="980" cy="445" r="52" fill="#ffb3c7"/>
+  <g fill="#17152f">
+    <text x="76" y="102" font-family="Fredoka, Arial, sans-serif" font-size="48" font-weight="700">Golden</text>
+    <text x="72" y="250" font-family="Erica One, Georgia, serif" font-size="88">NEVER LEAVE</text>
+    <text x="72" y="350" font-family="Erica One, Georgia, serif" font-size="88">LATE AGAIN</text>
+  </g>
+  <text x="78" y="430" fill="#17152f" font-family="Fredoka, Arial, sans-serif" font-size="34" font-weight="600">Calendar + live traffic tell you when to go.</text>
+  <g transform="translate(760 134)">
+    <rect width="330" height="370" rx="48" fill="#fff" stroke="#17152f" stroke-width="12"/>
+    <text x="165" y="72" text-anchor="middle" fill="#17152f" font-family="Fredoka, Arial, sans-serif" font-size="28" font-weight="700">TIME TO LEAVE</text>
+    <circle cx="165" cy="188" r="88" fill="#a9f4eb" stroke="#17152f" stroke-width="9"/>
+    <text x="165" y="175" text-anchor="middle" fill="#17152f" font-family="Fredoka, Arial, sans-serif" font-size="24" font-weight="600">LEAVE IN</text>
+    <text x="165" y="230" text-anchor="middle" fill="#17152f" font-family="Fredoka, Arial, sans-serif" font-size="58" font-weight="700">2:00</text>
+    <rect x="43" y="300" width="244" height="48" rx="24" fill="#ffb3c7" stroke="#17152f" stroke-width="6"/>
+    <text x="165" y="333" text-anchor="middle" fill="#17152f" font-family="Fredoka, Arial, sans-serif" font-size="22" font-weight="700">YOU'RE GOLDEN</text>
+  </g>
+  <g fill="#17152f">
+    <circle cx="94" cy="520" r="8"/><circle cx="124" cy="520" r="8"/><circle cx="154" cy="520" r="8"/>
+  </g>
+</svg>

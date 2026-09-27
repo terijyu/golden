@@ -5,15 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Golden watches your calendar, location, and live traffic—then tells you exactly when to leave"
+      content="Golden checks your calendar and live traffic, then tells you exactly when to leave. Build on-time streaks or stay coordinated with a Golden Buddy."
     />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="theme-color" content="#fff8b5" />
-    <meta property="og:title" content="Golden — Never leave late again" />
+    <link rel="canonical" href="https://kijuki.com/golden/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Golden" />
+    <meta property="og:url" content="https://kijuki.com/golden/" />
+    <meta property="og:title" content="Golden: Know Exactly When to Leave" />
     <meta
       property="og:description"
-      content="A live departure countdown for people who are a little too optimistic about time"
+      content="Calendar and live-traffic alerts for people who are a little too optimistic about time."
     />
-    <title>Golden — Never leave late again</title>
+    <meta property="og:image" content="https://kijuki.com/golden/assets/golden-social-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Golden app: Never leave late again" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Golden: Know Exactly When to Leave" />
+    <meta
+      name="twitter:description"
+      content="Calendar and live-traffic alerts for people who are a little too optimistic about time."
+    />
+    <meta name="twitter:image" content="https://kijuki.com/golden/assets/golden-social-card.png" />
+    <meta name="twitter:image:alt" content="Golden app: Never leave late again" />
+
+    <title>Golden: Time to Leave App for Calendar &amp; Traffic</title>
+    <link rel="icon" href="assets/golden-favicon.svg" type="image/svg+xml" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,6 +43,90 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css?v=7" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "MobileApplication",
+            "@id": "https://kijuki.com/golden/#app",
+            "name": "Golden",
+            "url": "https://kijuki.com/golden/",
+            "description": "Golden checks your calendar and live traffic, then tells you exactly when to leave.",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "iOS",
+            "image": "https://kijuki.com/golden/assets/golden-social-card.png",
+            "featureList": [
+              "Calendar-aware departure countdowns",
+              "Live traffic updates",
+              "Driving, transit, walking and cycling support",
+              "On-time streaks and collectible badges",
+              "Shared departure status with Golden Buddy"
+            ],
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Golden",
+                "price": "8.99",
+                "priceCurrency": "USD"
+              },
+              {
+                "@type": "Offer",
+                "name": "Golden + Buddy",
+                "price": "12.99",
+                "priceCurrency": "USD"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://kijuki.com/golden/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Can I enter a destination myself?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Use a calendar event or add your next destination."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does my Buddy join?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Send one invite link. Your Buddy taps Continue - Included and skips payment completely."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What do we share?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Departure status, paired progress, streaks and high fives for plans you are attending together."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will Golden text my Buddy?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Buddy updates stay inside Golden as app notifications."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens when traffic changes?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Golden updates your leave time using the latest traffic before it is time to go."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
@@ -155,7 +260,7 @@
           <div class="timeline">
             <article class="timeline-step">
               <span class="step-number step-number--pink">1</span>
-              <img class="step-icon" src="assets/how-calendar.png" alt="" aria-hidden="true" />
+              <img class="step-icon" src="assets/how-calendar.png" alt="" aria-hidden="true" width="977" height="931" loading="lazy" decoding="async" />
               <div>
                 <h3>Calendar</h3>
                 <p>Golden reads your events—or you can add a destination yourself</p>
@@ -166,7 +271,7 @@
 
             <article class="timeline-step">
               <span class="step-number step-number--mint">2</span>
-              <img class="step-icon" src="assets/how-traffic.png" alt="" aria-hidden="true" />
+              <img class="step-icon" src="assets/how-traffic.png" alt="" aria-hidden="true" width="776" height="717" loading="lazy" decoding="async" />
               <div>
                 <h3>Traffic</h3>
                 <p>Golden checks the trip and updates the departure countdown</p>
@@ -177,7 +282,7 @@
 
             <article class="timeline-step">
               <span class="step-number step-number--yellow">3</span>
-              <img class="step-icon" src="assets/how-leave-alert.png" alt="" aria-hidden="true" />
+              <img class="step-icon" src="assets/how-leave-alert.png" alt="" aria-hidden="true" width="686" height="922" loading="lazy" decoding="async" />
               <div>
                 <h3>Leave alert</h3>
                 <p>You get a clear alert when it’s time to go</p>
