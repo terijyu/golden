@@ -43,6 +43,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css?v=7" />
+    <script src="analytics.js?v=1" defer></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -149,7 +150,7 @@
           <a href="#questions">Questions</a>
         </div>
 
-        <a class="button button--small button--mint" href="#pricing">Get Golden</a>
+        <a class="button button--small button--mint" href="#pricing" data-analytics-cta="nav">Get Golden</a>
       </nav>
 
       <div class="hero-layout shell">
@@ -159,7 +160,7 @@
           <p class="hero-deck">
             Golden watches your calendar, location, and live traffic—then tells you exactly when to leave
           </p>
-          <a class="button button--hero button--mint" href="#pricing">
+          <a class="button button--hero button--mint" href="#pricing" data-analytics-cta="hero">
             Get Golden <span aria-hidden="true">→</span>
           </a>
           <p class="hero-note">
@@ -321,6 +322,8 @@
                 href="https://pay.rev.cat/iuofkfysnglvqzpz/?package_id=golden_monthly&amp;hide_back_button=true"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-analytics-plan="base"
+                data-analytics-plan-id="golden_monthly"
               >Get Golden</a>
             </article>
 
@@ -342,6 +345,8 @@
                 href="https://pay.rev.cat/iuofkfysnglvqzpz/?package_id=buddy_monthly&amp;hide_back_button=true"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-analytics-plan="accountability"
+                data-analytics-plan-id="buddy_monthly"
               >Get Golden + Buddy</a>
             </article>
           </div>
@@ -388,7 +393,7 @@
         <div class="shell final-cta-inner">
           <p class="section-kicker">Time management, minus the management</p>
           <h2 id="final-title">Ready when you are</h2>
-          <a class="button button--hero button--mint" href="#pricing">See the plans <span aria-hidden="true">→</span></a>
+          <a class="button button--hero button--mint" href="#pricing" data-analytics-cta="final">See the plans <span aria-hidden="true">→</span></a>
         </div>
       </section>
     </main>
